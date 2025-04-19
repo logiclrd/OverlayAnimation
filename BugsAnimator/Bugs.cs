@@ -14,11 +14,11 @@ public class Bugs
 			new Parameters()
 			{
 				FrameCount = 500,
-				RenderWidth = 400,
-				RenderHeight = 320,
+				RenderWidth = 320,
+				RenderHeight = 240,
 				CornerRadius = 30,
 				BorderThickness = 3,
-				BugCount = 1000,
+				BugDensity = 1f / 128f,
 				BugSize = 6,
 				BugThickness = 3,
 				RepulsionStrength = 0.1f,
@@ -187,7 +187,7 @@ public class Bugs
 	{
 		Random rnd = new Random();
 
-		Bug[] bugs = new Bug[parameters.BugCount];
+		Bug[] bugs = new Bug[(int)(parameters.RenderWidth * parameters.RenderHeight * parameters.BugDensity)];
 
 		for (int i=0; i < bugs.Length; i++)
 		{

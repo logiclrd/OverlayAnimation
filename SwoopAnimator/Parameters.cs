@@ -8,6 +8,7 @@ public class Parameters
 	public int RenderWidth;
 	public int RenderHeight;
 	public int LeadInAreaWidth;
+	public float SwoopHeight;
 	public float SwoopStrokeExtentMin;
 	public float SwoopStrokeExtentMax;
 	public float SwoopStrokeAdvanceMin;

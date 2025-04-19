@@ -5,7 +5,7 @@ public class Parameters
 	public int RenderHeight;
 	public int CornerRadius;
 	public float BorderThickness;
-	public int BugCount;
+	public float BugDensity;
 	public float BugSize;
 	public float BugThickness;
 	public float RepulsionStrength;

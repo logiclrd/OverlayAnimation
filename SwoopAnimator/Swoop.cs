@@ -16,13 +16,14 @@ public class Swoop
 				RenderWidth = 1920,
 				RenderHeight = 350,
 				LeadInAreaWidth = 100,
-				SwoopStrokeExtentMin = 250,
-				SwoopStrokeExtentMax = 400,
-				SwoopStrokeAdvanceMin = 150,
-				SwoopStrokeAdvanceMax = 300,
+				SwoopHeight = 175,
+				SwoopStrokeExtentMin = 140,
+				SwoopStrokeExtentMax = 240,
+				SwoopStrokeAdvanceMin = 85,
+				SwoopStrokeAdvanceMax = 170,
 				SwoopColour = new SKColor(0xff04c4c7),
 				BackgroundColour = SKColors.Transparent,
-				SwoopStrokeBrushWidth = 120,
+				SwoopStrokeBrushWidth = 60,
 				SwoopStrokeBrushAngle = 15 / 57.295779f,
 				SwoopStrokeBrushAngleDelta = 10 / 57.295779f,
 				SwoopStrokeBend = 0.05f,
@@ -39,7 +40,7 @@ public class Swoop
 
 		// Start with a high point.
 		float xHigh = parameters.LeadInAreaWidth * (float)(-rnd.NextDouble() - 0.5);
-		float yHigh = parameters.RenderHeight * (float)rnd.NextDouble() * 0.3f;
+		float yHigh = parameters.SwoopHeight * (float)rnd.NextDouble() * 0.3f;
 
 		points.Add(new SKPoint(xHigh, yHigh));
 
@@ -51,7 +52,7 @@ public class Swoop
 		while (true)
 		{
 			// Next low point.
-			float nextYLow = parameters.RenderHeight * (float)(rnd.NextDouble() * 0.3 + 0.7);
+			float nextYLow = parameters.SwoopHeight * (float)(rnd.NextDouble() * 0.3 + 0.7);
 
 			Console.WriteLine("Plan next low Y: {0}", nextYLow);
 
@@ -116,7 +117,7 @@ public class Swoop
 				minimumNextXHigh = maximumNextXHigh;
 
 			xHigh = (float)(rnd.NextDouble() * (maximumNextXHigh - minimumNextXHigh) + minimumNextXHigh);
-			yHigh = parameters.RenderHeight * (float)rnd.NextDouble() * 0.3f;
+			yHigh = parameters.SwoopHeight * (float)rnd.NextDouble() * 0.3f;
 
 			points.Add(new SKPoint(xHigh, yHigh));
 

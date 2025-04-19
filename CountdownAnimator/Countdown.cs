@@ -16,7 +16,7 @@ public class Countdown
 				RenderWidth = 300,
 				RenderHeight = 200,
 				FontDirectory = "/home/logiclrd/90sFonts",
-				FontSize = 120,
+				FontSize = 100,
 				ChangeFontAfterFrames = 24,
 				ChangeColourAfterFrames = 24,
 				CountDownSeconds = 15,

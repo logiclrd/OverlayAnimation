@@ -65,15 +65,26 @@ class Program
 
 			var alpha = SKBitmap.FromImage(image);
 
-			var bits = bmp.Bytes;
+			byte[] imageBytes = bmp.Bytes;
+			byte[] alphaBytes = new byte[imageBytes.Length];
 
-			for (int y = 0; y < bmp.Height; y++)
-				for (int x = 0; x < bmp.Width; x++)
+			for (int y = 0, o = 0; y < bmp.Height; y++)
+				for (int x = 0; x < bmp.Width; x++, o += 4)
 				{
-					var pixel = bmp.GetPixel(x, y);
+					byte opacity = imageBytes[o + 3];
 
-					alpha.SetPixel(x, y, new SKColor(pixel.Alpha, pixel.Alpha, pixel.Alpha));
+					alphaBytes[o + 0] = alphaBytes[o + 1] = alphaBytes[o + 2] = opacity;
+					alphaBytes[o + 3] = 255;
 				}
+
+			unsafe
+			{
+				fixed (byte *alphaBytePtr = &alphaBytes[0])
+				{
+					alpha.InstallPixels(alpha.Info, new IntPtr(alphaBytePtr), alpha.Width * 4);
+				}
+			}
+
 
 			return alpha;
 		}

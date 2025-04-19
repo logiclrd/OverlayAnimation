@@ -1,3 +1,4 @@
 #!/bin/sh
 
-ffmpeg -i frame%04d.png -r 30000/1001 preview.mp4
+ffmpeg -i frame%04d.png -r 24000/1001 preview.mp4
+ffmpeg -i alpha%04d.png -r 24000/1001 -c:v ffv1 preview-alpha.mkv

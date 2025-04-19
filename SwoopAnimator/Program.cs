@@ -326,6 +326,10 @@ class Program
 				endT,
 				frame);
 
+			// TODO: bubble with squirmy worms background
+			// TODO: countdown with numbers rotating through random 90s fonts
+			// TODO: drop shadow (down and to the left) for icon and countdown numbers
+
 			var imageData = frame.Encode(SKEncodedImageFormat.Png, default);
 
 			using (var stream = File.OpenWrite("frame" + frameNumber.ToString("d4") + ".png"))

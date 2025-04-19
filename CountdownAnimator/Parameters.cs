@@ -2,12 +2,12 @@ namespace CountdownAnimator;
 
 public class Parameters
 {
-	public int RenderWidth = 200;
-	public int RenderHeight = 100;
-	public string FontDirectory = "/home/logiclrd/90sFonts";
-	public int ChangeFontAfterFrames = 15;
-	public int ChangeColourAfterFrames = 13;
-	public int CountDownSeconds = 15;
-	public int DropShadowSize = 15;
-	public int FramesPerSecond = 30; // Animation is too short to worry about NTSC denominators.
+	public int RenderWidth;
+	public int RenderHeight;
+	public string FontDirectory;
+	public int ChangeFontAfterFrames;
+	public int ChangeColourAfterFrames;
+	public int CountDownSeconds;
+	public int DropShadowSize;
+	public int FramesPerSecond; // Animation is too short to worry about NTSC denominators.
 }

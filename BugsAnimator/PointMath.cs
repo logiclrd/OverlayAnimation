@@ -1,9 +1,9 @@
 using System;
 using System.Drawing;
 
-namespace BugsAnimator;
-
 using SkiaSharp;
+
+namespace BugsAnimator;
 
 public class PointMath
 {

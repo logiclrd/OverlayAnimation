@@ -17,11 +17,11 @@ public class Countdown
 				RenderHeight = 200,
 				FontDirectory = "/home/logiclrd/90sFonts",
 				FontSize = 120,
-				ChangeFontAfterFrames = 15,
-				ChangeColourAfterFrames = 13,
+				ChangeFontAfterFrames = 24,
+				ChangeColourAfterFrames = 24,
 				CountDownSeconds = 15,
 				DropShadowSize = 15,
-				FramesPerSecond = 30, // Animation is too short to worry about NTSC denominators.
+				FramesPerSecond = 24, // Animation is too short to worry about NTSC denominators.
 			};
 	}
 

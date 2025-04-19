@@ -8,6 +8,25 @@ namespace BugsAnimator;
 
 public class Bugs
 {
+	public Parameters CreateDefaultParameters()
+	{
+		return
+			new Parameters()
+			{
+				FrameCount = 500,
+				RenderWidth = 400,
+				RenderHeight = 320,
+				CornerRadius = 30,
+				BorderThickness = 3,
+				BugCount = 1000,
+				BugSize = 6,
+				BugThickness = 3,
+				RepulsionStrength = 0.1f,
+				MaximumDistance = 15,
+				Jitter = 0.25f,
+			};
+	}
+
 	public void Advance(Random rnd, Bug[] bugs, Parameters parameters)
 	{
 		for (int i=0; i < bugs.Length; i++)
@@ -162,25 +181,6 @@ public class Bugs
 
 			return SKBitmap.FromImage(image);
 		}
-	}
-
-	public Parameters CreateDefaultParameters()
-	{
-		return
-			new Parameters()
-			{
-				FrameCount = 500,
-				RenderWidth = 400,
-				RenderHeight = 320,
-				CornerRadius = 30,
-				BorderThickness = 3,
-				BugCount = 1000,
-				BugSize = 6,
-				BugThickness = 3,
-				RepulsionStrength = 0.1f,
-				MaximumDistance = 15,
-				Jitter = 0.25f,
-			};
 	}
 
 	public IEnumerable<SKBitmap> RenderSequence(Parameters parameters)

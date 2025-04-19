@@ -40,7 +40,42 @@ class Program
 			using (var stream = File.OpenWrite("frame" + frameNumber.ToString("d4") + ".png"))
 				imageData.SaveTo(stream);
 
+			var alphaImage = ExtractAlpha(frame);
+
+			var alphaData = alphaImage.Encode(SKEncodedImageFormat.Png, default);
+
+			using (var stream = File.OpenWrite("alpha" + frameNumber.ToString("d4") + ".png"))
+				alphaData.SaveTo(stream);
+
 			frameNumber++;
+		}
+	}
+
+	static SKBitmap ExtractAlpha(SKBitmap bmp)
+	{
+		var info = new SKImageInfo(bmp.Width, bmp.Height);
+
+		using (var surface = SKSurface.Create(info))
+		{
+			var canvas = surface.Canvas;
+
+			canvas.Clear(SKColors.Black);
+
+			var image = surface.Snapshot();
+
+			var alpha = SKBitmap.FromImage(image);
+
+			var bits = bmp.Bytes;
+
+			for (int y = 0; y < bmp.Height; y++)
+				for (int x = 0; x < bmp.Width; x++)
+				{
+					var pixel = bmp.GetPixel(x, y);
+
+					alpha.SetPixel(x, y, new SKColor(pixel.Alpha, pixel.Alpha, pixel.Alpha));
+				}
+
+			return alpha;
 		}
 	}
 

@@ -21,7 +21,7 @@ public class Swoop
 				SwoopStrokeAdvanceMin = 150,
 				SwoopStrokeAdvanceMax = 300,
 				SwoopColour = new SKColor(0xff04c4c7),
-				BackgroundColour = SKColors.White, //SKColors.Transparent,
+				BackgroundColour = SKColors.Transparent,
 				SwoopStrokeBrushWidth = 120,
 				SwoopStrokeBrushAngle = 15 / 57.295779f,
 				SwoopStrokeBrushAngleDelta = 10 / 57.295779f,
@@ -29,7 +29,7 @@ public class Swoop
 				SwoopStrokeBrushDotSize = 4.5f,
 				SwoopStrokeBrushDotSizeVariance = 1f,
 				AnimationDuration = 2.5f,
-				FramesPerSecond = 30000f / 1001f,
+				FramesPerSecond = 24000f / 1001f,
 			};
 	}
 

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwoopAnimator", "SwoopAnimator\SwoopAnimator.csproj", "{22CCED1A-8361-4921-A924-A97D7C1EA656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugsAnimator", "BugsAnimator\BugsAnimator.csproj", "{BFB0E08B-A8AB-497D-B7AD-F858A4C1C0EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountdownAnimator", "CountdownAnimator\CountdownAnimator.csproj", "{1310D064-923E-4D31-91A0-872EA8054987}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22CCED1A-8361-4921-A924-A97D7C1EA656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22CCED1A-8361-4921-A924-A97D7C1EA656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22CCED1A-8361-4921-A924-A97D7C1EA656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22CCED1A-8361-4921-A924-A97D7C1EA656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB0E08B-A8AB-497D-B7AD-F858A4C1C0EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB0E08B-A8AB-497D-B7AD-F858A4C1C0EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB0E08B-A8AB-497D-B7AD-F858A4C1C0EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB0E08B-A8AB-497D-B7AD-F858A4C1C0EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1310D064-923E-4D31-91A0-872EA8054987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1310D064-923E-4D31-91A0-872EA8054987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1310D064-923E-4D31-91A0-872EA8054987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1310D064-923E-4D31-91A0-872EA8054987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -3,6 +3,8 @@ public class Parameters
 	public int FrameCount;
 	public int RenderWidth;
 	public int RenderHeight;
+	public int CornerRadius;
+	public float BorderThickness;
 	public int BugCount;
 	public float BugSize;
 	public float BugThickness;

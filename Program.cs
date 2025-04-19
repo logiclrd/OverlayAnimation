@@ -14,6 +14,7 @@ class Program
 		public SKPoint LeftEnd, RightEnd;
 		public SKPoint LeftDelta, RightDelta;
 		public SKPoint Jitter;
+		public SKPoint Momentum;
 		public float Angle;
 
 		public void UpdateEnds(float size)
@@ -32,6 +33,9 @@ class Program
 	{
 		for (int i=0; i < bugs.Length; i++)
 		{
+			bugs[i].Momentum = PointMath.Multiply(bugs[i].Momentum, 0.9f);
+			bugs[i].Momentum = PointMath.Add(bugs[i].Momentum, PointMath.Multiply(bugs[i].Jitter, 0.1f));
+
 			bugs[i].Jitter = PointMath.Multiply(bugs[i].Jitter, 0.9f);
 			bugs[i].Jitter = PointMath.Add(
 				bugs[i].Jitter,
@@ -39,7 +43,7 @@ class Program
 					new SKPoint((float)(rnd.NextDouble() * parameters.Jitter), 0),
 					(float)(rnd.NextDouble() * Math.PI * 2)));
 
-			bugs[i].Position = PointMath.Add(bugs[i].Position, bugs[i].Jitter);
+			bugs[i].Position = PointMath.Add(bugs[i].Position, bugs[i].Momentum);
 
 			bugs[i].UpdateEnds(parameters.BugSize);
 		}
@@ -127,17 +131,53 @@ class Program
 		{
 			var canvas = surface.Canvas;
 
-			canvas.Clear(SKColors.White);
+			canvas.Clear(SKColors.Transparent);
+
+			var drawingArea = new SKRoundRect();
+
+			float halfPen = parameters.BorderThickness * 0.5f;
+			var cornerRadius = new SKPoint(parameters.CornerRadius, parameters.CornerRadius);
+
+			drawingArea.SetRectRadii(
+				new SKRect(halfPen + 1, halfPen + 1, parameters.RenderWidth - halfPen - 2, parameters.RenderHeight - halfPen - 2),
+				new SKPoint[]
+				{
+					cornerRadius,
+					cornerRadius,
+					cornerRadius,
+					cornerRadius,
+				});
+
+			canvas.DrawRoundRect(
+				drawingArea,
+				new SKPaint()
+				{
+					Style = SKPaintStyle.Fill,
+					Color = SKColors.White,
+				});
+
+			canvas.ClipRoundRect(drawingArea, SKClipOperation.Intersect);
 
 			var bugPaint = new SKPaint();
 
-			bugPaint.Color = SKColors.DarkGray;
+			bugPaint.Color = SKColors.LightGray;
 			bugPaint.StrokeCap = SKStrokeCap.Round;
 			bugPaint.StrokeWidth = parameters.BugThickness;
 			bugPaint.Style = SKPaintStyle.Stroke;
+			bugPaint.IsAntialias = true;
 
 			for (int i=0; i < bugs.Length; i++)
 				canvas.DrawLine(bugs[i].LeftEnd, bugs[i].RightEnd, bugPaint);
+
+			canvas.DrawRoundRect(
+				drawingArea,
+				new SKPaint()
+				{
+					Style = SKPaintStyle.Stroke,
+					Color = SKColors.Black,
+					StrokeWidth = parameters.BorderThickness,
+					IsAntialias = true,
+				});
 
 			var image = surface.Snapshot();
 
@@ -152,7 +192,9 @@ class Program
 			{
 				FrameCount = 500,
 				RenderWidth = 400,
-				RenderHeight = 300,
+				RenderHeight = 320,
+				CornerRadius = 30,
+				BorderThickness = 3,
 				BugCount = 1000,
 				BugSize = 6,
 				BugThickness = 3,

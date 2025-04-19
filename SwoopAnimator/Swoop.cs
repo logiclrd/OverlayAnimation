@@ -6,7 +6,7 @@ using SkiaSharp;
 
 namespace SwoopAnimator;
 
-class Swoop
+public class Swoop
 {
 	public Parameters CreateDefaultParameters()
 	{
@@ -20,6 +20,7 @@ class Swoop
 				SwoopStrokeExtentMax = 400,
 				SwoopStrokeAdvanceMin = 150,
 				SwoopStrokeAdvanceMax = 300,
+				SwoopColour = new SKColor(0xff04c4c7),
 				BackgroundColour = SKColors.White, //SKColors.Transparent,
 				SwoopStrokeBrushWidth = 120,
 				SwoopStrokeBrushAngle = 15 / 57.295779f,
@@ -281,7 +282,7 @@ class Swoop
 
 							for (int dx = minDX; dx < maxDX; dx++)
 								for (int dy = minDY; dy < maxDY; dy++)
-									target.SetPixel(pixelPoint.X + dx, pixelPoint.Y + dy, SKColors.Teal);
+									target.SetPixel(pixelPoint.X + dx, pixelPoint.Y + dy, parameters.SwoopColour);
 						}
 					}
 				}

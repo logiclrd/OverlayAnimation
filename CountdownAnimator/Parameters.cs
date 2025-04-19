@@ -5,6 +5,7 @@ public class Parameters
 	public int RenderWidth;
 	public int RenderHeight;
 	public string FontDirectory;
+	public float FontSize;
 	public int ChangeFontAfterFrames;
 	public int ChangeColourAfterFrames;
 	public int CountDownSeconds;

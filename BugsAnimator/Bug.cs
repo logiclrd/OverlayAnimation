@@ -4,7 +4,7 @@ using SkiaSharp;
 
 namespace BugsAnimator;
 
-class Bug
+public class Bug
 {
 	public SKPoint Position;
 	public SKPoint LeftEnd, RightEnd;

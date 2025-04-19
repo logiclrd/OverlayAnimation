@@ -13,7 +13,7 @@ class Program
 
 		var parameters = countdown.CreateDefaultParameters();
 
-		var fonts = countdown.BuildFontList(parameters.FontDirectory);
+		var fonts = countdown.BuildFontList(parameters);
 
 		int frameNumber = 0;
 

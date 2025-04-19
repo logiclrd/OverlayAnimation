@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ffmpeg -i frame%04d.png -r 30000/1001 preview.mp4

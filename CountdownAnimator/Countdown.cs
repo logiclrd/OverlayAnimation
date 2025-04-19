@@ -6,16 +6,17 @@ using SkiaSharp;
 
 namespace CountdownAnimator;
 
-class Countdown
+public class Countdown
 {
 	public Parameters CreateDefaultParameters()
 	{
 		return
 			new Parameters()
 			{
-				RenderWidth = 200,
-				RenderHeight = 100,
+				RenderWidth = 300,
+				RenderHeight = 200,
 				FontDirectory = "/home/logiclrd/90sFonts",
+				FontSize = 120,
 				ChangeFontAfterFrames = 15,
 				ChangeColourAfterFrames = 13,
 				CountDownSeconds = 15,
@@ -24,22 +25,22 @@ class Countdown
 			};
 	}
 
-	public List<SKFont> BuildFontList(string fontDirectory)
+	public List<SKFont> BuildFontList(Parameters parameters)
 	{
 		List<SKFont> fonts = new List<SKFont>();
 
-		foreach (var fileName in Directory.GetFiles(fontDirectory))
+		foreach (var fileName in Directory.GetFiles(parameters.FontDirectory))
 		{
 			string extension = Path.GetExtension(fileName);
 
 			if (string.Equals(extension, ".ttf", System.StringComparison.InvariantCultureIgnoreCase)
 			 || string.Equals(extension, ".otf", System.StringComparison.InvariantCultureIgnoreCase))
 			{
-				string filePath = Path.Combine(fontDirectory, fileName);
+				string filePath = Path.Combine(parameters.FontDirectory, fileName);
 
 				var typeface = SKTypeface.FromFile(filePath);
 
-				fonts.Add(new SKFont(typeface, size: 72));
+				fonts.Add(new SKFont(typeface, parameters.FontSize));
 			}
 		}
 

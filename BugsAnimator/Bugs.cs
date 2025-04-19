@@ -6,7 +6,7 @@ using SkiaSharp;
 
 namespace BugsAnimator;
 
-class Bugs
+public class Bugs
 {
 	public void Advance(Random rnd, Bug[] bugs, Parameters parameters)
 	{

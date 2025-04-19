@@ -2,7 +2,7 @@ using SkiaSharp;
 
 namespace SwoopAnimator;
 
-class Parameters
+public class Parameters
 {
 	public int RandomSeed;
 	public int RenderWidth;
@@ -12,6 +12,7 @@ class Parameters
 	public float SwoopStrokeExtentMax;
 	public float SwoopStrokeAdvanceMin;
 	public float SwoopStrokeAdvanceMax;
+	public SKColor SwoopColour;
 	public SKColor BackgroundColour;
 	public int SwoopStrokeBrushWidth;
 	public float SwoopStrokeBrushAngle;

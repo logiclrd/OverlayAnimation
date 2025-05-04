@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="../Utility/Utility.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="SkiaSharp" Version="3.116.1" />
+		<PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />
+		<PackageReference Include="Svg.Skia" Version="3.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Images/Resources/bubble wand.svg" />
+		<EmbeddedResource Include="Images/Resources/bubble smol.svg" />
+		<EmbeddedResource Include="Images/Resources/bubble medium.svg" />
+		<EmbeddedResource Include="Images/Resources/bubble large.svg" />
+
+		<EmbeddedResource Include="Images/Resources/finger monster.svg" />
+
+		<EmbeddedResource Include="Images/Resources/heart staker.svg" />
+		<EmbeddedResource Include="Images/Resources/heart staker bang.svg" />
+		<EmbeddedResource Include="Images/Resources/heart staker left.svg" />
+		<EmbeddedResource Include="Images/Resources/heart staker right.svg" />
+
+		<EmbeddedResource Include="Images/Resources/lips top.svg" />
+		<EmbeddedResource Include="Images/Resources/lips bottom.svg" />
+		<EmbeddedResource Include="Images/Resources/lips tongue.svg" />
+
+		<EmbeddedResource Include="Images/Resources/moustache.svg" />
+
+		<EmbeddedResource Include="Images/Resources/noisemaker.svg" />
+		<EmbeddedResource Include="Images/Resources/noisemaker noot noot.svg" />
+
+		<EmbeddedResource Include="Images/Resources/tealight base.svg" />
+		<EmbeddedResource Include="Images/Resources/tealight flame.svg" />
+	</ItemGroup>
+</Project>

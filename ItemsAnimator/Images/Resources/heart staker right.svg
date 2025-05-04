@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="169.31"
+   height="108"
+   viewBox="0 0 44.796602 28.575001"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="heart staker right.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.2810466"
+     inkscape:cx="5.0739762"
+     inkscape:cy="215.44884"
+     inkscape:window-width="2560"
+     inkscape:window-height="1510"
+     inkscape:window-x="1920"
+     inkscape:window-y="54"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="false"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.0030288,-36.0002)">
+    <g
+       id="g1582"
+       transform="matrix(0.38145169,0,0,0.38145169,1.2387291,22.267863)">
+      <path
+         id="rect1268"
+         style="opacity:1;fill:#806600;stroke:none;stroke-width:20.6147;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+         d="M 442.33984,89.712891 224.55664,113.4043 235.25195,126.375 443.85938,103.68164 Z"
+         transform="matrix(0.26458333,0,0,0.26458333,2.0030288,36.0002)" />
+      <path
+         id="rect948"
+         style="opacity:1;fill:#d40000;stroke:none;stroke-width:18.3762;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+         d="M 277.57422,0 A 82.552282,90.708661 0 0 0 221.3457,24.460938 l 14.39844,21.595703 -28.10156,46.835937 36.68945,44.494142 -39.8125,46.05664 33.56641,35.9082 -22.57813,59.72071 3.69336,4.05664 116.7461,-128.2793 a 82.552282,90.708661 0 0 0 0,-128.281251 A 82.552282,90.708661 0 0 0 277.57422,0 Z"
+         transform="matrix(0.26458333,0,0,0.26458333,2.0030288,36.0002)" />
+    </g>
+  </g>
+</svg>

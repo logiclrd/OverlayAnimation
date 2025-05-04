@@ -4,6 +4,8 @@ using System.Linq;
 
 using SkiaSharp;
 
+using Utility;
+
 namespace SwoopAnimator;
 
 public class Swoop

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="169.3105"
+   height="107.99999"
+   viewBox="0 0 44.796736 28.574998"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="heart staker.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.2810466"
+     inkscape:cx="-95.234631"
+     inkscape:cy="219.7422"
+     inkscape:window-width="2560"
+     inkscape:window-height="1510"
+     inkscape:window-x="0"
+     inkscape:window-y="54"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.0030288,-36.0002)">
+    <g
+       id="g1593"
+       transform="matrix(0.38145133,0,0,0.38145133,1.2389708,22.267876)">
+      <rect
+         style="opacity:1;fill:#806600;stroke:none;stroke-width:5.4543;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+         id="rect1268"
+         width="117.72601"
+         height="3.7176633"
+         x="-5.8457618"
+         y="72.259995"
+         transform="rotate(-6.2083535)" />
+      <path
+         id="rect948"
+         style="opacity:1;fill:#d40000;stroke:none;stroke-width:4.86203;stroke-linejoin:round;-inkscape-stroke:none;stop-color:#000000"
+         d="m 90.889256,43.029697 a 21.841958,24 0 0 0 -30.889302,1e-6 21.841958,24 0 0 0 -30.889303,-1e-6 21.841958,24 0 0 0 3.33e-4,33.94088 l 30.88897,33.940883 30.888969,-33.940883 a 21.841958,24 0 0 0 3.33e-4,-33.94088 z" />
+    </g>
+  </g>
+</svg>

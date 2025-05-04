@@ -4,6 +4,8 @@ using System.Linq;
 
 using SkiaSharp;
 
+using Utility;
+
 namespace BugsAnimator;
 
 public class Bugs

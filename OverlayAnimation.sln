@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountdownAnimator", "Countd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combiner", "Combiner\Combiner.csproj", "{B6692A14-F2FD-4DF3-8B48-53AC5765D9A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemsAnimator", "ItemsAnimator\ItemsAnimator.csproj", "{AC6AB4E2-54BA-4385-8D45-462A5C9FC667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{CC8D07A0-8F1E-4383-BF55-598C82B552BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{B6692A14-F2FD-4DF3-8B48-53AC5765D9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6692A14-F2FD-4DF3-8B48-53AC5765D9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6692A14-F2FD-4DF3-8B48-53AC5765D9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6AB4E2-54BA-4385-8D45-462A5C9FC667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6AB4E2-54BA-4385-8D45-462A5C9FC667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6AB4E2-54BA-4385-8D45-462A5C9FC667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6AB4E2-54BA-4385-8D45-462A5C9FC667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8D07A0-8F1E-4383-BF55-598C82B552BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8D07A0-8F1E-4383-BF55-598C82B552BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8D07A0-8F1E-4383-BF55-598C82B552BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8D07A0-8F1E-4383-BF55-598C82B552BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

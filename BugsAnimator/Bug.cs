@@ -2,6 +2,8 @@ using System;
 
 using SkiaSharp;
 
+using Utility;
+
 namespace BugsAnimator;
 
 public class Bug

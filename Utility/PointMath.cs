@@ -3,10 +3,13 @@ using System.Drawing;
 
 using SkiaSharp;
 
-namespace BugsAnimator;
+namespace Utility;
 
 public class PointMath
 {
+	public static SKPoint Negative(SKPoint a)
+		=> new SKPoint(-a.X, -a.Y);
+
 	public static SKPoint Add(SKPoint a, SKPoint b)
 		=> new SKPoint(a.X + b.X, a.Y + b.Y);
 

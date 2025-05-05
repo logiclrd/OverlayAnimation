@@ -31,6 +31,8 @@ public class Swoop
 				SwoopStrokeBend = 0.05f,
 				SwoopStrokeBrushDotSize = 4.5f,
 				SwoopStrokeBrushDotSizeVariance = 1f,
+				SwoopShadowDeltaX = -1.8f,
+				SwoopShadowDeltaY = 3f,
 				AnimationDuration = 2.5f,
 				FramesPerSecond = 24000f / 1001f,
 			};
@@ -203,7 +205,7 @@ public class Swoop
 		return length;
 	}
 
-	void RenderSwoop(Parameters parameters, Random rnd, SKPoint[] mainSwoopPoints, double fromT, double toT, SKBitmap target)
+	void RenderSwoop(Parameters parameters, Random rnd, SKPoint[] mainSwoopPoints, double fromT, double toT, SKColor colour, SKPoint offset, SKBitmap target)
 	{
 		float[] brushNoise = new float[parameters.SwoopStrokeBrushWidth];
 
@@ -269,7 +271,9 @@ public class Swoop
 						{
 							var brushPoint = PointMath.Interpolate(brushStart, brushEnd, brushT);
 
-							var pixelPoint = PointMath.ToInts(brushPoint);
+							var offsetPoint = PointMath.Add(brushPoint, offset);
+
+							var pixelPoint = PointMath.ToInts(offsetPoint);
 
 							int minDX = minD, minDY = minD;
 							int maxDX = maxD, maxDY = maxD;
@@ -285,7 +289,7 @@ public class Swoop
 
 							for (int dx = minDX; dx < maxDX; dx++)
 								for (int dy = minDY; dy < maxDY; dy++)
-									target.SetPixel(pixelPoint.X + dx, pixelPoint.Y + dy, parameters.SwoopColour);
+									target.SetPixel(pixelPoint.X + dx, pixelPoint.Y + dy, colour);
 						}
 					}
 				}
@@ -316,12 +320,53 @@ public class Swoop
 
 			var frame = InitializeFrame(parameters);
 
+			int loopStart, loopLimit, loopDelta;
+			int loopIterator = 0;
+			Func<float> getDeltaX, getDeltaY;
+
+			if (Math.Abs(parameters.SwoopShadowDeltaX) > Math.Abs(parameters.SwoopShadowDeltaY))
+			{
+				loopStart = (int)Math.Truncate(parameters.SwoopShadowDeltaX);
+				loopLimit = 0;
+				loopDelta = -Math.Sign(parameters.SwoopShadowDeltaX);
+
+				getDeltaX = () => loopIterator;
+				getDeltaY = () => parameters.SwoopShadowDeltaY - (loopIterator - loopStart) * parameters.SwoopShadowDeltaY / (loopLimit - loopStart);
+			}
+			else
+			{
+				loopStart = (int)Math.Truncate(parameters.SwoopShadowDeltaY);
+				loopLimit = 0;
+				loopDelta = -Math.Sign(parameters.SwoopShadowDeltaY);
+
+				getDeltaX = () => parameters.SwoopShadowDeltaX - (loopIterator - loopStart) * parameters.SwoopShadowDeltaX / (loopLimit - loopStart);
+				getDeltaY = () => loopIterator;
+			}
+
+			for (loopIterator = loopStart; loopIterator != loopLimit; loopIterator += loopDelta)
+			{
+				float dx = getDeltaX();
+				float dy = getDeltaY();
+
+				RenderSwoop(
+					parameters,
+					new Random(parameters.RandomSeed),
+					mainSwoopPoints,
+					startT,
+					endT,
+					SKColors.Black,
+					new SKPoint(dx, dy),
+					frame);
+			}
+
 			RenderSwoop(
 				parameters,
 				new Random(parameters.RandomSeed),
 				mainSwoopPoints,
 				startT,
 				endT,
+				parameters.SwoopColour,
+				SKPoint.Empty,
 				frame);
 
 			yield return frame;

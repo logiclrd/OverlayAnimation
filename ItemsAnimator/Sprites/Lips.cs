@@ -6,11 +6,11 @@ using Svg.Skia;
 
 using Utility;
 
-namespace ItemsAnimator.Images;
+namespace ItemsAnimator.Sprites;
 
 using ItemsAnimator.Utility;
 
-public class Lips : Image
+public class Lips : Sprite
 {
 	static SKSvg s_lipsTop;
 	static SKSvg s_lipsBottom;
@@ -49,6 +49,9 @@ public class Lips : Image
 
 	SKPoint s_tongueRotationOrigin = new SKPoint(17.2f, 45.4f);
 
+	public override float MaxWidth => 184;
+	public override float MaxHeight => 107.4f;
+
 	public override void Render(SKCanvas target, SKPoint position, float t)
 	{
 		while (t >= LoopSeconds)
@@ -56,15 +59,18 @@ public class Lips : Image
 
 		int frameNumber = (int)Math.Round(t * 23.976f);
 
-		target.DrawPicture(s_lipsTop.Picture, position);
+		using (var transform = TransformScope.Translate(target, position))
+		using (transform.Translate(-MaxWidth / 2, -MaxHeight / 2))
+		{
+			target.DrawPicture(s_lipsTop.Picture);
 
-		using (var transform = TransformScope.Translate(target, -92f, -46.7f))
-		using (transform.Translate(s_tonguePath.GetTranslationAtFrame(frameNumber)))
-		using (transform.Translate(s_tongueRotationOrigin))
-		using (transform.RotateDegrees(s_tongueRotation.GetValueAtFrame(frameNumber)))
-		using (transform.Translate(PointMath.Negative(s_tongueRotationOrigin)))
-			target.DrawPicture(s_lipsTongue.Picture, position);
+			using (transform.Translate(s_tonguePath.GetTranslationAtFrame(frameNumber)))
+			using (transform.Translate(s_tongueRotationOrigin))
+			using (transform.RotateDegrees(s_tongueRotation.GetValueAtFrame(frameNumber)))
+			using (transform.Translate(PointMath.Negative(s_tongueRotationOrigin)))
+				target.DrawPicture(s_lipsTongue.Picture);
 
-		target.DrawPicture(s_lipsBottom.Picture, position);
+			target.DrawPicture(s_lipsBottom.Picture);
+		}
 	}
 }

@@ -16,8 +16,8 @@ public class Bugs
 			new Parameters()
 			{
 				FrameCount = 500,
-				RenderWidth = 320,
-				RenderHeight = 240,
+				RenderWidth = 400,
+				RenderHeight = 200,
 				CornerRadius = 30,
 				BorderThickness = 3,
 				BugDensity = 1f / 128f,

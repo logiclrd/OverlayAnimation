@@ -19,7 +19,7 @@ public class Countdown
 				FontSize = 100,
 				ChangeFontAfterFrames = 24,
 				ChangeColourAfterFrames = 24,
-				CountDownSeconds = 15,
+				CountdownSeconds = 15,
 				DropShadowSize = 15,
 				FramesPerSecond = 24, // Animation is too short to worry about NTSC denominators.
 			};
@@ -71,7 +71,7 @@ public class Countdown
 
 		currentFont = PickRandomFont();
 
-		int frameCount = parameters.CountDownSeconds * parameters.FramesPerSecond;
+		int frameCount = parameters.CountdownSeconds * parameters.FramesPerSecond;
 
 		var textPosition = new SKPoint(parameters.RenderWidth * 0.5f, parameters.RenderHeight * 0.75f);
 
@@ -87,7 +87,7 @@ public class Countdown
 		{
 			int secondIndex = frameNumber / parameters.FramesPerSecond;
 
-			int secondValue = parameters.CountDownSeconds - secondIndex;
+			int secondValue = parameters.CountdownSeconds - secondIndex;
 
 			if ((frameNumber % parameters.ChangeFontAfterFrames) == 0)
 				currentFont = PickRandomFont();

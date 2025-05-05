@@ -4,11 +4,11 @@ using SkiaSharp;
 
 using Svg.Skia;
 
-namespace ItemsAnimator.Images;
+namespace ItemsAnimator.Sprites;
 
 using ItemsAnimator.Utility;
 
-public class HeartStaker : Image
+public class HeartStaker : Sprite
 {
 	static SKSvg s_heartStaker;
 	static SKSvg s_heartStakerBang;
@@ -25,6 +25,9 @@ public class HeartStaker : Image
 
 	SKPoint BangOffset = new SKPoint(31, 0);
 
+	public override float MaxWidth => 190;
+	public override float MaxHeight => 115;
+
 	const int Frame1_DurationFrames = 32;
 	const int Frame2_DurationFrames = 3;
 	const int Frame3_DurationFrames = 35;
@@ -37,7 +40,9 @@ public class HeartStaker : Image
 		while (t > DurationSeconds)
 			t -= DurationSeconds;
 
-		using (var transform = TransformScope.Translate(target, -84.5f, -54f))
+		using (var transform = TransformScope.Translate(target, position))
+		using (transform.Translate(-MaxWidth / 2, -MaxHeight / 2))
+		using (transform.Translate(10, 0))
 		{
 			int frameNumber = (int)Math.Round(t * DurationFrames / DurationSeconds);
 
@@ -46,11 +51,11 @@ public class HeartStaker : Image
 			int frame3End = frame2End + Frame3_DurationFrames;
 
 			if (frameNumber < frame1End)
-				target.DrawPicture(s_heartStaker.Picture, position);
+				target.DrawPicture(s_heartStaker.Picture);
 			else if (frameNumber < frame2End)
 			{
-				target.DrawPicture(s_heartStaker.Picture, position);
-				target.DrawPicture(s_heartStakerBang.Picture, position);
+				target.DrawPicture(s_heartStaker.Picture);
+				target.DrawPicture(s_heartStakerBang.Picture);
 			}
 			else
 			{
@@ -58,13 +63,13 @@ public class HeartStaker : Image
 				using (transform.RotateDegrees(-7))
 				using (transform.Translate(-75, -100))
 				using (transform.Translate(-3, 5))
-					target.DrawPicture(s_heartStakerLeft.Picture, position);
+					target.DrawPicture(s_heartStakerLeft.Picture);
 
 				using (transform.Translate(96, 100))
 				using (transform.RotateDegrees(5))
 				using (transform.Translate(-96, -100))
 				using (transform.Translate(3, 5))
-					target.DrawPicture(s_heartStakerRight.Picture, position);
+					target.DrawPicture(s_heartStakerRight.Picture);
 			}
 		}
 	}

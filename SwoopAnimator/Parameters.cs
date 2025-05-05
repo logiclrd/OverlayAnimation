@@ -21,6 +21,8 @@ public class Parameters
 	public float SwoopStrokeBend;
 	public float SwoopStrokeBrushDotSize;
 	public float SwoopStrokeBrushDotSizeVariance;
+	public float SwoopShadowDeltaX;
+	public float SwoopShadowDeltaY;
 	public float AnimationDuration;
 	public float FramesPerSecond;
 }

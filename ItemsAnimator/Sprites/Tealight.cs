@@ -4,11 +4,11 @@ using SkiaSharp;
 
 using Svg.Skia;
 
-namespace ItemsAnimator.Images;
+namespace ItemsAnimator.Sprites;
 
 using ItemsAnimator.Utility;
 
-public class Tealight : Image
+public class Tealight : Sprite
 {
 	static SKSvg s_tealightBase;
 	static SKSvg s_tealightFlame;
@@ -27,6 +27,9 @@ public class Tealight : Image
 	float s_flameBlownAngle = 22;
 
 	float s_scale = 0.2f;
+
+	public override float MaxWidth => 245;
+	public override float MaxHeight => 170;
 
 	public override void Render(SKCanvas target, SKPoint position, float t)
 	{

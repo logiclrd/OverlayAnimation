@@ -12,28 +12,33 @@
 		<PackageReference Include="Svg.Skia" Version="3.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-		<EmbeddedResource Include="Images/Resources/bubble wand.svg" />
-		<EmbeddedResource Include="Images/Resources/bubble smol.svg" />
-		<EmbeddedResource Include="Images/Resources/bubble medium.svg" />
-		<EmbeddedResource Include="Images/Resources/bubble large.svg" />
+		<EmbeddedResource Include="Sprites/Resources/bubble wand.svg" />
+		<EmbeddedResource Include="Sprites/Resources/bubble smol.svg" />
+		<EmbeddedResource Include="Sprites/Resources/bubble medium.svg" />
+		<EmbeddedResource Include="Sprites/Resources/bubble large.svg" />
 
-		<EmbeddedResource Include="Images/Resources/finger monster.svg" />
+		<EmbeddedResource Include="Sprites/Resources/finger monster.svg" />
 
-		<EmbeddedResource Include="Images/Resources/heart staker.svg" />
-		<EmbeddedResource Include="Images/Resources/heart staker bang.svg" />
-		<EmbeddedResource Include="Images/Resources/heart staker left.svg" />
-		<EmbeddedResource Include="Images/Resources/heart staker right.svg" />
+		<EmbeddedResource Include="Sprites/Resources/heart staker.svg" />
+		<EmbeddedResource Include="Sprites/Resources/heart staker bang.svg" />
+		<EmbeddedResource Include="Sprites/Resources/heart staker left.svg" />
+		<EmbeddedResource Include="Sprites/Resources/heart staker right.svg" />
 
-		<EmbeddedResource Include="Images/Resources/lips top.svg" />
-		<EmbeddedResource Include="Images/Resources/lips bottom.svg" />
-		<EmbeddedResource Include="Images/Resources/lips tongue.svg" />
+		<EmbeddedResource Include="Sprites/Resources/lips top.svg" />
+		<EmbeddedResource Include="Sprites/Resources/lips bottom.svg" />
+		<EmbeddedResource Include="Sprites/Resources/lips tongue.svg" />
 
-		<EmbeddedResource Include="Images/Resources/moustache.svg" />
+		<EmbeddedResource Include="Sprites/Resources/moustache.svg" />
 
-		<EmbeddedResource Include="Images/Resources/noisemaker.svg" />
-		<EmbeddedResource Include="Images/Resources/noisemaker noot noot.svg" />
+		<EmbeddedResource Include="Sprites/Resources/noisemaker.svg" />
+		<EmbeddedResource Include="Sprites/Resources/noisemaker noot noot.svg" />
 
-		<EmbeddedResource Include="Images/Resources/tealight base.svg" />
-		<EmbeddedResource Include="Images/Resources/tealight flame.svg" />
+		<EmbeddedResource Include="Sprites/Resources/tealight base.svg" />
+		<EmbeddedResource Include="Sprites/Resources/tealight flame.svg" />
+
+		<EmbeddedResource Include="Sprites/Resources/cookie.svg" />
+		<EmbeddedResource Include="Sprites/Resources/cookie bite.svg" />
+		<EmbeddedResource Include="Sprites/Resources/cookie bite bite.svg" />
+		<EmbeddedResource Include="Sprites/Resources/cookie bite bite bite.svg" />
 	</ItemGroup>
 </Project>

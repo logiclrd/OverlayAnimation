@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 
 using SkiaSharp;
 
-using ItemsAnimator.Images;
+using ItemsAnimator.Sprites;
 
 namespace ItemsAnimator;
 
@@ -20,6 +21,11 @@ public class Items
 
 	public IEnumerable<SKBitmap> RenderSequence(Parameters parameters)
 	{
+		var item = new Tealight();
+
+		parameters.RenderWidth = (int)Math.Ceiling(item.MaxWidth);
+		parameters.RenderHeight = (int)Math.Ceiling(item.MaxHeight);
+
 		for (int frameNumber = 0; frameNumber < 60; frameNumber++)
 		{
 			float t = frameNumber / 23.976f;
@@ -30,9 +36,7 @@ public class Items
 			{
 				var canvas = surface.Canvas;
 
-				var item = new Tealight();
-
-				item.Render(canvas, new SKPoint(300, 300), t);
+				item.Render(canvas, new SKPoint(item.MaxWidth / 2, item.MaxHeight / 2), t);
 
 				var image = surface.Snapshot();
 

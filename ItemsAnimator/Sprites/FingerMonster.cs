@@ -6,11 +6,11 @@ using Svg.Skia;
 
 using Utility;
 
-namespace ItemsAnimator.Images;
+namespace ItemsAnimator.Sprites;
 
 using ItemsAnimator.Utility;
 
-public class FingerMonster : Image
+public class FingerMonster : Sprite
 {
 	static SKSvg s_fingerMonster;
 
@@ -32,6 +32,9 @@ public class FingerMonster : Image
 
 	float s_duration = 48 / 23.976f;
 
+	public override float MaxWidth => 256;
+	public override float MaxHeight => 180;
+
 	public override void Render(SKCanvas target, SKPoint position, float t)
 	{
 		while (t >= s_duration)
@@ -39,8 +42,10 @@ public class FingerMonster : Image
 
 		int frameNumber = (int)Math.Round(t * 23.976f);
 
-		using (var transform = TransformScope.Translate(target, -156, -140))
+		using (var transform = TransformScope.Translate(target, position))
+		using (transform.Scale(0.75f, 0.75f))
+		using (transform.Translate(-MaxWidth / 2, -MaxHeight / 2))
 		using (transform.Translate(s_path.GetTranslationAtFrame(frameNumber)))
-			target.DrawPicture(s_fingerMonster.Picture, position);
+			target.DrawPicture(s_fingerMonster.Picture);
 	}
 }

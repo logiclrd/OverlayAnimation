@@ -1,13 +1,14 @@
+using System;
+
 using SkiaSharp;
 
 using Svg.Skia;
 
-namespace ItemsAnimator.Images;
+namespace ItemsAnimator.Sprites;
 
-using System;
 using ItemsAnimator.Utility;
 
-public class Noisemaker : Image
+public class Noisemaker : Sprite
 {
 	static SKSvg s_noisemaker;
 	static SKSvg s_noisemakerNootNoot;
@@ -25,6 +26,9 @@ public class Noisemaker : Image
 	const int Noot2Start = 12;
 	const int Noot2Length = 5;
 
+	public override float MaxWidth => 203;
+	public override float MaxHeight => 115;
+
 	public override void Render(SKCanvas target, SKPoint position, float t)
 	{
 		while (t >= s_duration)
@@ -32,16 +36,17 @@ public class Noisemaker : Image
 
 		int frameNumber = (int)Math.Round(t * 23.976f);
 
-		using (var transform = TransformScope.Translate(target, -101.5f, -57.5f))
+		using (var transform = TransformScope.Translate(target, position))
+		using (transform.Translate(-MaxWidth / 2, -MaxHeight / 2))
 		{
 			using (transform.Translate(0, 45))
-				target.DrawPicture(s_noisemaker.Picture, position);
+				target.DrawPicture(s_noisemaker.Picture);
 
 			if (((frameNumber >= Noot1Start) && (frameNumber - Noot1Start < Noot1Length))
 			 || ((frameNumber >= Noot2Start) && (frameNumber - Noot2Start < Noot2Length)))
 			{
 				using (transform.Translate(112, 0))
-					target.DrawPicture(s_noisemakerNootNoot.Picture, position);
+					target.DrawPicture(s_noisemakerNootNoot.Picture);
 			}
 		}
 	}

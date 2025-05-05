@@ -8,7 +8,7 @@ public class Parameters
 	public float FontSize;
 	public int ChangeFontAfterFrames;
 	public int ChangeColourAfterFrames;
-	public int CountDownSeconds;
+	public int CountdownSeconds;
 	public int DropShadowSize;
 	public int FramesPerSecond; // Animation is too short to worry about NTSC denominators.
 }

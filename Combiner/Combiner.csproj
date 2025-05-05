@@ -8,5 +8,6 @@
 		<ProjectReference Include="../SwoopAnimator/SwoopAnimator.csproj" />
 		<ProjectReference Include="../BugsAnimator/BugsAnimator.csproj" />
 		<ProjectReference Include="../CountdownAnimator/CountdownAnimator.csproj" />
+		<ProjectReference Include="../ItemsAnimator/ItemsAnimator.csproj" />
 	</ItemGroup>
 </Project>

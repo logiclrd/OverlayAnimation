@@ -25,6 +25,17 @@ class Program
 		return sequence;
 	}
 
+	static Sequence DrHorrible_Key_Sequence()
+	{
+		var sequence = new Sequence();
+
+		sequence.FinalFrameNumber = 38002;
+		sequence.CountdownSeconds = 10;
+		sequence.Sprite = new Key();
+
+		return sequence;
+	}
+
 	static Sequence DrHorrible_Cookie_Sequence()
 	{
 		var sequence = new Sequence();
@@ -44,6 +55,18 @@ class Program
 		sequence.CountdownSeconds = 20;
 		sequence.Sprite = new FingerMonster();
 		sequence.SpritePositionTweak = new SKPoint(-30, 0);
+
+		return sequence;
+	}
+
+	static Sequence Buffy_Dinos_Sequence()
+	{
+		// I gave birth to a pterodactyl
+		var sequence = new Sequence();
+
+		sequence.FinalFrameNumber = 11238;
+		sequence.CountdownSeconds = 10;
+		sequence.Sprite = new Dinos();
 
 		return sequence;
 	}
@@ -109,12 +132,13 @@ class Program
 	static IEnumerable<Sequence> CreateDrHorribleSequences()
 	{
 		yield return DrHorrible_Moustache_Sequence();
-		yield return DrHorrible_Cookie_Sequence();
+		yield return DrHorrible_Key_Sequence();
 		yield return DrHorrible_FingerMonster_Sequence();
 	}
 
 	static IEnumerable<Sequence> CreateBuffySequences()
 	{
+		yield return Buffy_Dinos_Sequence();
 		yield return Buffy_BubbleWand_Sequence();
 		yield return Buffy_Lips_Sequence();
 		yield return Buffy_Tealight_Sequence();

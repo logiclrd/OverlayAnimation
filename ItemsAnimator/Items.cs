@@ -21,7 +21,7 @@ public class Items
 
 	public IEnumerable<SKBitmap> RenderSequence(Parameters parameters)
 	{
-		var item = new Tealight();
+		var item = new BubbleWand();
 
 		parameters.RenderWidth = (int)Math.Ceiling(item.MaxWidth);
 		parameters.RenderHeight = (int)Math.Ceiling(item.MaxHeight);
@@ -35,6 +35,8 @@ public class Items
 			using (var surface = SKSurface.Create(info))
 			{
 				var canvas = surface.Canvas;
+
+				Console.WriteLine("Starting frame #" + frameNumber);
 
 				item.Render(canvas, new SKPoint(item.MaxWidth / 2, item.MaxHeight / 2), t);
 

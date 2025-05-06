@@ -40,5 +40,22 @@
 		<EmbeddedResource Include="Sprites/Resources/cookie bite.svg" />
 		<EmbeddedResource Include="Sprites/Resources/cookie bite bite.svg" />
 		<EmbeddedResource Include="Sprites/Resources/cookie bite bite bite.svg" />
+
+		<EmbeddedResource Include="Sprites/Resources/key.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 1.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 2.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 3.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 4.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 5.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 6.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 7.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 8.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 9.svg" />
+		<EmbeddedResource Include="Sprites/Resources/key zap 10.svg" />
+
+		<EmbeddedResource Include="Sprites/Resources/dinos 1.svg" />
+		<EmbeddedResource Include="Sprites/Resources/dinos 2.svg" />
+		<EmbeddedResource Include="Sprites/Resources/dinos 3.svg" />
+		<EmbeddedResource Include="Sprites/Resources/dinos 4.svg" />
 	</ItemGroup>
 </Project>

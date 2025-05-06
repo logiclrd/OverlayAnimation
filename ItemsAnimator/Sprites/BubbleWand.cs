@@ -38,8 +38,8 @@ public class BubbleWand : Sprite
 
 			if (t > 0.25f)
 			{
-				using (transform.Translate(19, 0))
-					target.DrawPicture(s_bubbleSmol.Picture);
+				using (transform.Translate(61, 56))
+					target.DrawPicture(s_bubbleLarge.Picture);
 			}
 
 			if (t > 0.5f)
@@ -50,8 +50,8 @@ public class BubbleWand : Sprite
 
 			if (t > 0.75f)
 			{
-				using (transform.Translate(61, 56))
-					target.DrawPicture(s_bubbleLarge.Picture);
+				using (transform.Translate(19, 0))
+					target.DrawPicture(s_bubbleSmol.Picture);
 			}
 		}
 	}
